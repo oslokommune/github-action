@@ -1,12 +1,7 @@
 # Github Action for Serverless
 
-This Action wraps the [Serverless Framework](https://serverless.com) to enable common Serverless commands.
+This Action wraps the [Serverless Framework](https://serverless.com) to enable common Serverless commands. Using [this image](https://hub.docker.com/r/nikolaik/python-nodejs) to allow use of the serverless-python-requirements plugin to deploy AWS lambda functions written in python.
 
-## This project is looking for maintainers!
-
-If you would like to be a maintainer of this project, please reach out to one of the active [Serverless organization](https://github.com/serverless) members to express your interest.
-
-Welcome, and thanks in advance for your help!
 
 ## Usage
 
@@ -36,7 +31,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - name: serverless deploy
-      uses: serverless/github-action@master
+      uses: oslokommune/serverless-python-action@master
       with:
         args: deploy
       env:
