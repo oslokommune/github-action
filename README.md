@@ -31,7 +31,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - name: serverless deploy
-      uses: oslokommune/serverless-python-action@master
+      uses: oslokommune/serverless-python-action@main
       with:
         args: deploy
       env:
